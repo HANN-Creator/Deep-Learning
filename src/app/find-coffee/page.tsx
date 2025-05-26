@@ -4,10 +4,8 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Step data
 const steps = ['습관', '커피맛', '디카페인', '성향', '추천'] as const;
 
-// Option definitions
 const brewMethods = [
   { id: 'maker', title: '에스프레소 머신', icon: '/method-maker.png' },
   { id: 'drip', title: '핸드 드립', icon: '/method_drip.png' },
@@ -42,7 +40,6 @@ interface Choice {
   style: StyleId | null;
 }
 
-// Map method+style to actual bean recommendation
 const beanMap: Record<string, string> = {
   'maker-origin': '콜롬비아 수프리모 후일라',
   'drip-origin': '에티오피아 예가체프 G1',
